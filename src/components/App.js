@@ -1,30 +1,20 @@
-import React, { Component, Suspense } from 'react';
-import { SimpleComponent } from './SimpleComponent';
-import { ErrorBoundary } from './ErrorBoundary';
-
-const RemoteComponent = React.lazy(() => import('remoteApp/RemoteComponent')); // https://ru.reactjs.org/docs/code-splitting.html#reactlazy
-console.log('RemoteComponent:', RemoteComponent);
+import React from 'react';
 
 import '../styles/App.css';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>
-                    React App (Host)
-                </h1>
-                <SimpleComponent />
-                <ErrorBoundary>
-                    <Suspense fallback={<div>Загрузка...</div>}>
-                        <RemoteComponent />
-                    </Suspense>
-                    <div/>
-                </ ErrorBoundary>
-                <SimpleComponent />
+function App() {
+    return (
+        <>
+            <h1>
+                React App (Remote)
+            </h1>
+            <div className='Host-Container'>
+                <ModuleLoader
+                    module='RemoteComponent1'
+                />
             </div>
-        );
-    }
+        </>
+    );
 }
 
 export default App;

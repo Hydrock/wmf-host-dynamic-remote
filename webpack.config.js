@@ -24,9 +24,7 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'hostApp',
-            remotes: {
-                remoteApp: 'remoteApp@http://localhost:8082/remoteEntry.js',
-            },
+            remotes: {},
             shared: {
                 react: {
                     eager: true,

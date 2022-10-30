@@ -1,6 +1,6 @@
 # wmf-host
 
-Приложение - Host
+Приложение - Host - Для динамической загрузки (runtime) модулей WMF
 
 ## Guide
 
@@ -8,9 +8,9 @@
 
 ```bash
 
-git clone https://github.com/Hydrock/wmf-host.git
+git clone https://github.com/Hydrock/wmf-host-dynamic-remote.git
 
-git clone https://github.com/Hydrock/wmf-remote.git
+git clone https://github.com/Hydrock/wmf-remote-dynamic-remote.git
 
 ```
 
